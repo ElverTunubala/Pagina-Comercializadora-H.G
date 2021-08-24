@@ -3,12 +3,32 @@
 
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
+				<div class="foter2">
+					<div>
+					<h2 class="telefono">Teléfono</h2>
+					<p class="telefon">(+57)2392854</p>
+					</div>
+					<div>
+					<h2 class="telefono">Horarios</h2>
+					<p class="telefon">Lunes a Viernes </p>
+					<p class="telefon">Sabados y Domingos </p>
+                    </div>
+					<div>
+					<h2 class="telefono">Direccion</h2>
+					<p class="telefon">CR 40 # 49-75 Medellin </p>
+					<p class="telefon">Plazita de las Florez </p>
+					</div>
+					
+				</div>
+				<div class="exceso">
+					<p>El exceso de alcohol es perjudicial para la salud. Ley 30 de 1986. Prohíbase el expendio de bebidas embriagantes a menores de edad y mujeres embarazadas. Ley 124 de 1994.</p>
+				</div>
+				<hr>
 
 				<!-- copyright -->
 				<p class="copyright">
 					&copy; <?php echo date('Y'); ?> Derechos Reservados <?php bloginfo('name'); ?>
-					
-				</p>
+			    </p>
 				<!-- /copyright -->
 
 			</footer>

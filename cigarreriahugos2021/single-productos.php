@@ -1,33 +1,27 @@
 <?php get_header(); ?>
 
-<main role="main">
+ <main role="main">
 	<!-- section -->
     <section class="clear">
 	
-		 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-	    <!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	       <!-- article -->
+		   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		  
-		    <!-- post title -->
-			<h1>
+		      <!-- post title -->
+			  <h1>
 				<?php the_title(); ?>
-			</h1>
-			<!-- /post title -->
+			  </h1>
+			  <!-- /post title -->
 
-			
+			  <?php the_content(); // Galeria ?>
+              <?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 
-		
+            </article>
+		    <!-- /article -->
 
-			<?php the_content(); // Galeria ?>
-            <?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-
-			
-
-		</article>
-		<!-- /article -->
-
-	<?php endwhile; ?>
+	   <?php endwhile; ?>
 
 	<?php else: ?>
 
@@ -43,8 +37,5 @@
 
 	</section>
 	<!-- /section -->
-	</main>
-
-
-
+ </main>
 <?php get_footer(); ?>

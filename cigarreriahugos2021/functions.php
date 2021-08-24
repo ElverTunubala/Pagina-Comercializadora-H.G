@@ -31,9 +31,9 @@ if (function_exists('add_theme_support'))
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
-    add_image_size('productodestacado', 523, 294,'', true); // productodestacado
+    add_image_size('productodestacado', 523, 294, true); // productodestacado
     add_image_size("mediano", 350, 250, true);
-    add_image_size("slider",2000, 600, true);
+    add_image_size("slider",2000, 754,'', true);
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
 	'default-color' => 'FFF',
@@ -440,17 +440,16 @@ function create_post_type_html5()
         'public' => true,
         'hierarchical' => false, // Allows your posts to behave like Hierarchy Pages
         'has_archive' => false,
-        'menu_position' => 10,
+        'menu_position' => 11,
         'supports' => array(
             'title',
             'editor',
-            'excerpt',
+            
             'thumbnail'
         ), // Go to Dashboard Custom HTML5 Blank post for supports
         'can_export' => true, // Allows export in Tools > Export
         'taxonomies' => array(
-            'post_tag',
-            'category'
+            
         ) // Add Category and Post Tags support
     ));
 }

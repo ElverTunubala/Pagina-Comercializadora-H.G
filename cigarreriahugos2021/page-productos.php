@@ -1,12 +1,13 @@
 <?php
 /* Template Name: Productos */
+
  get_header(); ?>
 
 <?php
 echo do_shortcode('[smartslider3 slider="2"]');
 ?>
 
-	<main role="main">
+	<main role="main" class="main1">
 		<!-- section -->
 		<section class="clear">
 
@@ -35,8 +36,8 @@ echo do_shortcode('[smartslider3 slider="2"]');
 				<a class="mas-info" href="<?php the_permalink()?>">
                      <h2><?php the_title(); ?></h2>
                 </a>
-				<p class="precio"><?php the_field("precio"); ?></p>
-                <p><?php the_field("descripcion");?></p>
+				
+                
 				
 		        <br class="clear">
 			</article><!-- /article -->

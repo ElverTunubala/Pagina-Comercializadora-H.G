@@ -32,42 +32,56 @@
 			<header class="header clear" role="banner">
 			   <div class="navegacion clear">
 
-			     <div class="wrapper">
+			      <div class="wrapper">
 
-					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
-						</a>
-					</div>
-					<!-- /logo -->
-
-					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
-
+					  <!-- logo -->
+					  <div class="logo">
+						   <a href="<?php echo home_url(); ?>">
+							  <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
+						   </a>
+					  </div>
+					  <!-- /logo -->
+                      
+					  <!-- nav -->
+					  <nav class="nav" role="navigation">
+						  <?php html5blank_nav(); ?>
+					  </nav>
+					  <!-- /nav -->
+					  <div class="buscador">
+					       <?php get_template_part("searchform"); ?>
+					  </div>
+					  
                   </div> <!-- wrapper -->
 			   </div> <!--Navegacion -->
 
-			<?php if(is_page() ) { ?>
+			 <?php if(is_page() ) { ?>
                <?php $destacada = wp_get_attachment_image_src( get_post_thumbnail_id(), "full"); ?>
 			   <?php $destacada = $destacada[0]; ?>
 
 			   <div class="imagenFondo" style="background-image:url(<?php echo $destacada ?>);"></div>
-			<?php } ?>
+			 <?php } ?>
 
-			<?php if(is_single() ) { ?>
+			 <?php if(is_single() ) { ?>
                <?php $destacada = wp_get_attachment_image_src( get_post_thumbnail_id(), "full"); ?>
 			   <?php $destacada = $destacada[0]; ?>
 
 			   <div class="imagenFondo" style="background-image:url(<?php echo $destacada ?>);"></div>
-			<?php } ?>
+			 <?php } ?>
 
 			</header>
 			<!-- /header -->
+			<div class="lo">
+						   <a  href="https://api.whatsapp.com/send?phone=573116476502&text=hola%2C%20!!!%0Aestoy%20interesado%20en%20saber%20de%20este%20producto%20.....%20" target="_blank">
+							  <img src="<?php echo get_template_directory_uri(); ?>/img/logowasap.png" alt="Logo" class="log">
+						   </a>
+						   <a  href="https://www.instagram.com/cigarreriahugos/?hl=es" target="_blank">
+							  <img src="<?php echo get_template_directory_uri(); ?>/img/logoinstagram.png" alt="Logo" class="logoi">
+						   </a>
+						   <a  href="https://www.instagram.com/cigarreriahugos/?hl=es" target="_blank">
+							  <img src="<?php echo get_template_directory_uri(); ?>/img/logoface.png" alt="Logo" class="logof">
+						   </a>
+			</div>
+			
 
 			
 

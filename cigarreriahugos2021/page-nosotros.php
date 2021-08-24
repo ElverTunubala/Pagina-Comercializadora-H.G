@@ -11,34 +11,15 @@
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class("grid2-3"); ?>>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
                
 				<?php the_content(); ?>
-				
-
-				 <?php
-				    $imagen = get_field("imagen_1");
-					$size = "large";
-					   if ($imagen){
-						   echo wp_get_attachment_image($imagen, $size);
-					   }
-				?>
-				 <?php the_field("texto1"); ?>
-				 <?php
-				    $imagen = get_field("imagen_2");
-					$size = "mediano";
-					   if ($imagen){
-						   echo wp_get_attachment_image($imagen, $size);
-					   }
-				?>
-
-				 
+				<?php the_field("texto1"); ?>
 				<?php comments_template( '', true ); // Remove if you don't want comments ?>
 
 				<br class="clear">
-
-				<?php edit_post_link(); ?>
+                <?php edit_post_link(); ?>
 
 			</article>
 			<!-- /article -->
@@ -62,5 +43,4 @@
 	</main>
 
 <?php get_sidebar(); ?>
-
 <?php get_footer(); ?>

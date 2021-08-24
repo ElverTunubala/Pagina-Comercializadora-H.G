@@ -28,16 +28,37 @@
 /* html element 62.5% font-size for REM use */
 
 /* segundo slider */
-.n2-ss-no-bga-fixed{
-	height: 390px;
-	width: 100%;
-	
-}
+
 .n2-padding{
 	margin-top: -100px;
 }
 
+/* fin segundo slider */
 
+/* logos redes sociales */
+.lo{
+	position: fixed;
+}
+.log{
+	width: 70px;
+	height: 70px;
+}
+.logoi{
+	width: 60px;
+	height: 60px;
+    position: absolute;
+	top:70px;
+	left:2px;
+}
+.logof{
+	width: 50px;
+	height: 50px;
+    position: absolute;
+	top:135px;
+	left:4px;
+	
+}
+/* fin redes sociales */
 html {
 	font-size:62.5%;
 }
@@ -51,7 +72,6 @@ body {
     content:' ';
     display:table;
 }
-
 .clear:after {
     clear:both;
 }
@@ -84,8 +104,8 @@ input:focus {
 /*------------------------------------*\
     STRUCTURE
 \*------------------------------------*/
-/* GRID*/
 
+/* GRID*/
 [class*="grid"]{
 	float: left;
 	position: relative;
@@ -99,6 +119,13 @@ input:focus {
 }
 .grid2-4{
 	width: 50%;
+	height: 36px;
+}
+@media only screen and (min-width: 992px){
+	.grid2-4{
+	width: 50%;
+	height: 360px;
+	}
 }
 /* wrapper */
 .wrapper {
@@ -108,6 +135,11 @@ input:focus {
 	position:relative;
 }
 /* header */
+.buscador{
+	position: relative;
+	right: -950px;
+	top: -40px;
+}
 .header {
 	position:relative;
 }
@@ -130,7 +162,6 @@ input:focus {
 	top: 0;
 	background-size: cover;
 }
-
 /* logo */
 .logo img {
 	display: block;
@@ -160,12 +191,12 @@ input:focus {
 	text-transform:uppercase;
 
 	animation-name: parpadeo;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 
   -webkit-animation-name:parpadeo;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 2s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
 }
@@ -174,8 +205,7 @@ input:focus {
 	50% { opacity: 0.0; }
 	100% { opacity: 1.0; }
   }
-  
-  @-webkit-keyframes parpadeo {  
+@-webkit-keyframes parpadeo{  
 	0% { opacity: 1.0; }
 	50% { opacity: 0.0; }
 	 100% { opacity: 1.0; }
@@ -183,7 +213,6 @@ input:focus {
 /* fin parpadeo ofertas */
   
 /* nav */
-
 .nav {
 	display: none;
 }
@@ -231,12 +260,13 @@ input:focus {
 	color:white;
 	text-transform: uppercase;
 }
-}/* cierre para menu movil */
+}
+/* cierre para menu movil */
 
 .nav .menu-item-object-page{
 	border-bottom:2px solid rgb(71, 82, 228);
 }
-/*codigo de animacion paginas */
+/*codigo de animacion paginas del nav */
 @media (min-width: 768px){
 	.nav a {
 		font-size: 2.6rem;
@@ -277,17 +307,37 @@ input:focus {
 
 /* Contenido */
 main{
-	margin-top: 260px;
+	margin-top: 6px;
+}
+@media only screen and (min-width: 992px){
+	main{
+		margin-top: 40px;
+	}
 }
 /* sidebar */
 .sidebar{
 
 }
 /* footer */
+.foter2{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	
+}
+.telefono{
+	font-size: 20px;
+	padding-right: 100px;
+}
+.telefon{
+	padding-right: 100px;
+}
 .footer {
 	background-color: #242121;
 	border-top: 6px solid 	#8c94da;
-	padding: 30px 0;
+	padding: 40px 0;
+	color:white;
+	text-align: center;
 
 }
 .footer p.copyright{
@@ -301,30 +351,30 @@ main{
 /** PRINCIPAL */
 
 /** slider */
+section.slider{
+	bottom: 1000px;
+}
 ul.slider{
 	margin: 0;
 	padding: 0;
 }
-
 @media only screen and (min-width: 992px){
 	section.slider{
-		margin-top: -100px;
+		margin-top: -100px!important;
+		position:relative;
+		left: 0px;
+		top: -90px;
 	}
 }
+
 .bx-wrapper .bx-viewport {
 	left:0;
+	right: 0;
 	box-shadow: none;
 	border:none;
-	margin-top: -100px;
+	margin-bottom: -90px;
 }
-.imagenFondos{
-	height: 330px;
-	width: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-	background-size: cover;
-}
+
 /** fin slider */
 h1{
 	color:	#FF7F50;
@@ -344,6 +394,19 @@ h1{
 	background-color: #4c93c2;
 }
 /** Productos */
+/** imagenes y texto de productos */
+.gallery-item .wp-caption-text {
+	color:black;
+	font-size: 12px;
+	font-family: cursive;
+}
+.precio{
+	color:#CD5C5C;
+	font-size: 19px;
+	font-weight: bold;
+
+}
+/**  imagenes y texto de productos */
 .imagen-destacada{
 	position: relative;
 }
@@ -353,7 +416,7 @@ h1{
 	right: -19px;
 }
 h2 {
-	font-size: 24px;
+	font-size: 30px;
 	font-weight: normal;
 
 	color: transparent;
