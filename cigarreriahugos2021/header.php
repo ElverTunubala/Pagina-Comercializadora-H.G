@@ -25,10 +25,7 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-	
-		
-
-			<!-- header -->
+	        <!-- header -->
 			<header class="header clear" role="banner">
 			   <div class="navegacion clear">
 
@@ -37,8 +34,8 @@
 					  <!-- logo -->
 					  <div class="logo">
 						   <a href="<?php echo home_url(); ?>">
-							  <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
-						   </a>
+							  <img src="https://res.cloudinary.com/medellin/image/upload/v1635189301/hugos/logo_yl1ob9.png" alt="Logo" class="logo-img">
+							</a>
 					  </div>
 					  <!-- /logo -->
                       
@@ -72,13 +69,13 @@
 			<!-- /header -->
 			<div class="lo">
 						   <a  href="https://api.whatsapp.com/send?phone=573116476502&text=hola%2C%20!!!%0Aestoy%20interesado%20en%20saber%20de%20este%20producto%20.....%20" target="_blank">
-							  <img src="<?php echo get_template_directory_uri(); ?>/img/logowasap.png" alt="Logo" class="log">
+							  <img src="https://res.cloudinary.com/medellin/image/upload/v1637779239/hugos/logowasap_mccd4s.png" alt="Logo" class="log">
 						   </a>
 						   <a  href="https://www.instagram.com/cigarreriahugos/?hl=es" target="_blank">
-							  <img src="<?php echo get_template_directory_uri(); ?>/img/logoinstagram.png" alt="Logo" class="logoi">
+							  <img src="https://res.cloudinary.com/medellin/image/upload/v1637779795/hugos/logoinstagram_fhdref.png" alt="Logo" class="logoi">
 						   </a>
-						   <a  href="https://www.instagram.com/cigarreriahugos/?hl=es" target="_blank">
-							  <img src="<?php echo get_template_directory_uri(); ?>/img/logoface.png" alt="Logo" class="logof">
+						   <a  href="https://www.facebook.com/cigarreria.hugos.3" target="_blank">
+							  <img src="https://res.cloudinary.com/medellin/image/upload/v1637779906/hugos/logoface_zmkkgf.png" alt="Logo" class="logof">
 						   </a>
 			</div>
 			

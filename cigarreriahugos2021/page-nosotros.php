@@ -2,7 +2,7 @@
 /* Template Name: Nosotros */
  get_header(); ?>
 
-	<main role="main">
+	<main role="main" >
 		<!-- section -->
 		<section class="clear">
 
@@ -19,7 +19,7 @@
 				<?php comments_template( '', true ); // Remove if you don't want comments ?>
 
 				<br class="clear">
-                <?php edit_post_link(); ?>
+                
 
 			</article>
 			<!-- /article -->

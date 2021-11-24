@@ -7,7 +7,7 @@
 echo do_shortcode('[smartslider3 slider="2"]');
 ?>
 
-	<main role="main" class="main1">
+	<main role="main" class="mainproductos">
 		<!-- section -->
 		<section class="clear">
 

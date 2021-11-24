@@ -13,7 +13,7 @@
 					<p class="telefon">Lunes a Viernes </p>
 					<p class="telefon">Sabados y Domingos </p>
                     </div>
-					<div>
+					<div >
 					<h2 class="telefono">Direccion</h2>
 					<p class="telefon">CR 40 # 49-75 Medellin </p>
 					<p class="telefon">Plazita de las Florez </p>

@@ -33,7 +33,7 @@ if (function_exists('add_theme_support'))
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
     add_image_size('productodestacado', 523, 294, true); // productodestacado
     add_image_size("mediano", 350, 250, true);
-    add_image_size("slider",2000, 754,'', true);
+    
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
 	'default-color' => 'FFF',
@@ -60,9 +60,32 @@ if (function_exists('add_theme_support'))
     load_theme_textdomain('html5blank', get_template_directory() . '/languages');
 }
 
+  //Incluir buscador en proceso
+  
+
 /*------------------------------------*\
 	Functions
 \*------------------------------------*/
+
+// Incluir Bootstrap CSS
+function bootstrap_css() {
+	wp_enqueue_style( 'bootstrap_css', 
+  					get_stylesheet_directory_uri() . '/css/bootstrap.min.css', 
+  					array(), 
+  					'5.1.1'
+  					); 
+}
+add_action( 'wp_enqueue_scripts', 'bootstrap_css');
+
+// Incluir Bootstrap JS
+function bootstrap_js() {
+	wp_enqueue_script( 'bootstrap_js', 
+  					get_stylesheet_directory_uri() . '/js/bootstrap.min.js', 
+  					array('jquery'), 
+  					'5.1.1', 
+  					true); 
+}
+add_action( 'wp_enqueue_scripts', 'bootstrap_js');
 
 // HTML5 Blank navigation
 function html5blank_nav()
@@ -103,9 +126,6 @@ function html5blank_header_scripts()
         wp_register_script('lightbox', get_template_directory_uri() . '/js/lightbox.min.js', array(), 'v2.11.2',true); //lightbox
         wp_enqueue_script('lightbox'); // Enqueue it!
 
-        wp_register_script('bxslider', get_template_directory_uri() . '/js/jquery.bxslider.js', array(), 'v4.2.15',true); //bxslider
-        wp_enqueue_script('bxslider'); // Enqueue it!
-
         wp_register_script('slicknav', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array(), 'v1.0.10',true); //slicknav
         wp_enqueue_script('slicknav'); // Enqueue it!
 
@@ -131,9 +151,6 @@ function html5blank_styles()
 
     wp_register_style('lightboxcss', get_template_directory_uri() . '/css/lightbox.css', array(), '1.0', "all");
     wp_enqueue_style('lightboxcss'); // Enqueue it!
-
-    wp_register_style('bxslidercss', get_template_directory_uri() . '/css/jquery.bxslider.css', array(), '1.0', 'all');
-    wp_enqueue_style('bxslidercss'); // Enqueue it!
 
     wp_register_style('slicknavCss', get_template_directory_uri() . '/css/slicknav.min.css', array(), '1.0', 'all');
     wp_enqueue_style('slicknavCss'); // Enqueue it!
@@ -366,7 +383,7 @@ add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comment
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
-add_action("init", "slider_posttype");
+
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -454,42 +471,7 @@ function create_post_type_html5()
     ));
 }
 
-function slider_posttype()
-{
-    register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
-    register_taxonomy_for_object_type('post_tag', 'html5-blank');
-    register_post_type('slider', // Register Custom Post Type
-        array(
-        'labels' => array(
-            'name' => __('Slider', 'html5blank'), // Rename these to suit
-            'singular_name' => __('Slider', 'html5blank'),
-            'add_new' => __('Add New', 'html5blank'),
-            'add_new_item' => __('Add New Slider', 'html5blank'),
-            'edit' => __('Edit', 'html5blank'),
-            'edit_item' => __('Edit Slider', 'html5blank'),
-            'new_item' => __('New Slider', 'html5blank'),
-            'view' => __('View Slider', 'html5blank'),
-            'view_item' => __('View Slider', 'html5blank'),
-            'search_items' => __('Search Slider', 'html5blank'),
-            'not_found' => __('No se encontraron Slider ', 'html5blank'),
-            'not_found_in_trash' => __('No Slider found in Trash', 'html5blank')
-        ),
-        'public' => true,
-        'hierarchical' => false, // Allows your posts to behave like Hierarchy Pages
-        'has_archive' => true,
-        'menu_position' => 6,
-        'supports' => array(
-            'title',
-            'excerpt',
-            'thumbnail'
-        ), // Go to Dashboard Custom HTML5 Blank post for supports
-        'can_export' => true, // Allows export in Tools > Export
-        'taxonomies' => array(
-            'post_tag',
-            'category'
-        ) // Add Category and Post Tags support
-    ));
-}
+
 
 /*------------------------------------*\
 	ShortCode Functions

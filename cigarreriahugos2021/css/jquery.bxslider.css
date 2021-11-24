@@ -14,8 +14,13 @@
 .bx-wrapper img {
   max-width: 100%;
   display: block;
-  height: 480px;
+  height: 250px;
   width: 100%;
+}
+@media only screen and (min-width:992px){
+	.bx-wrapper img {
+		height: 550px;
+	}
 }
 .bxslider {
   margin: 0;
