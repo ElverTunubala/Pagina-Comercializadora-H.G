@@ -2,6 +2,7 @@
 		<!-- /wrapper -->
 
 			<!-- footer -->
+			<?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
 			<footer class="footer" role="contentinfo">
 				<div class="foter2">
 					<div>
